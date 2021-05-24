@@ -1,0 +1,66 @@
+<script type="text/x-red" data-template-name="firebase storage get">
+  <div class="form-tips"><p>Firebase storage</p>
+
+    <div class="form-row">
+      <label for="node-input-admin"><i class="fa"></i> Firebase Admin</label>
+      <input type="text" id="node-input-admin">
+    </div>
+    <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Node Name </label>
+      <input type="text" id="node-input-name">
+    </div>
+    <div class="form-row">
+      <label for="node-input-operation"><i class="fa fa-tag"></i> Storage operation </label>
+      <input type="text" id="node-input-operation">
+    </div>
+    <div class="form-row">
+      <label for="node-input-object"><i class="fa fa-tag"></i> Object </label>
+      <input type="text" id="node-input-object" placeholder="database object">
+    </div>
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="firebase storage get">
+    <p>This get metadata from a storage object.</p>
+</script>
+
+<style type="text/css">
+  .node_label_white {
+    fill: white;
+  }
+  .node_label_white_italic {
+    fill: white;
+    font-style: italic;
+  }
+  #palette_node_firebase_out > div.palette_label {
+    color: white;
+  }
+</style>
+
+<script type="text/javascript">
+
+  RED.nodes.registerType('firebase storage get',{
+    category: 'firebase',
+    defaults: {
+      name: {required:false},
+      operation: {required:true},
+      object: {required:true},
+      admin: {type:"firebase admin",required:true}
+    },
+    color: "#FF7900",
+    inputs:1,
+    outputs:1,
+    icon: "bridge.png",
+    align: "right",
+    label: function() {
+        return this.name || this.object || "firebase storage get";
+    },
+    labelStyle: function() {
+        return (this.name || this.object) ? "node_label_italic" : "";
+    }
+  });
+</script>
+
+
+
+

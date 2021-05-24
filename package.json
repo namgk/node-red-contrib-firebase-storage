@@ -1,13 +1,13 @@
 {
-  "name": "node-red-contrib-firebase-realtime-database",
-  "version": "1.0.8",
-  "description": "Communicate with google firebase realtime database. These nodes use the new firebase-admin API and service account json is used for authentication.",
+  "name": "node-red-contrib-firebase-storage",
+  "version": "1.0.9",
+  "description": "Communicate with google firebase storage. These nodes use the new firebase-admin API and service account json is used for authentication.",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/namgk/node-red-contrib-firebase-realtime-database.git"
+    "url": "git+https://github.com/namgk/node-red-contrib-firebase-storage.git"
   },
   "keywords": [
     "firebase",
@@ -17,19 +17,16 @@
   "author": "Nam Giang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/namgk/node-red-contrib-firebase-realtime-database/issues"
+    "url": "https://github.com/namgk/node-red-contrib-firebase-storage/issues"
   },
-  "homepage": "https://github.com/namgk/node-red-contrib-firebase-realtime-database#readme",
-  "dependencies": {
-    "node-red-contrib-firebase-admin-config": "1.0.4"
-  },
+  "homepage": "https://github.com/namgk/node-red-contrib-firebase-storage#readme",
   "peerDependencies": {
+    "node-red-contrib-firebase-admin-config": "1.1.5",
     "firebase-admin": "^9.8.0"
   },
   "node-red": {
     "nodes": {
-      "firebaseIn": "src/firebaseIn.js",
-      "firebaseOut": "src/firebaseOut.js"
+      "firebaseStorage": "src/firebaseStorage.js"
     }
   },
   "devDependencies": {

@@ -977,10 +977,10 @@ node-forge@^0.10.0:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
   integrity sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA==
 
-node-red-contrib-firebase-admin-config@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/node-red-contrib-firebase-admin-config/-/node-red-contrib-firebase-admin-config-1.0.2.tgz#2a14457770d345beeafc83edb8e7b5f8136d25f0"
-  integrity sha512-xW72sofgLNcrOxPOoCu7+j6zmfa0yaQZ+lsiWS8ngukgrYl0aPH50Yd6oo/Ti4LLXm+rzQ8S5Y9cdo20DC4UcQ==
+node-red-contrib-firebase-admin-config@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/node-red-contrib-firebase-admin-config/-/node-red-contrib-firebase-admin-config-1.1.0.tgz#c0c9c16bc014216416680258bc22aa1a4297ddb1"
+  integrity sha512-wuyMXdmsZ6+Zjg3NHp4q4wzamY9qHafOHPS421LtZq3uSrGc6njKHRqIQJ/tbJP7fQb5a+lM1ZryPTP7h3ELeQ==
   dependencies:
     firebase-admin "^9.8.0"
 
