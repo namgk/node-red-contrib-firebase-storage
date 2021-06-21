@@ -1,4 +1,4 @@
-const FirebaseStorageNode = require('./firebaseStorageNode');
+const FirebaseStorageFileNode = require('./firebaseStorageFileNode');
 
 function validateNodeConfig(n){
   if (!n.object){
@@ -17,7 +17,7 @@ function validateNodeConfig(n){
 module.exports = function(RED) {
   "use strict";
 
-  function FirebaseStorage(n) {
+  RED.nodes.registerType("firebase storage file", function(n) {
     validateNodeConfig(n)
 
     RED.nodes.createNode(this,n);
@@ -27,15 +27,13 @@ module.exports = function(RED) {
     node.operation = n.operation;
     node.admin = RED.nodes.getNode(n.admin);
 
-    const firebaseStorageNode = new FirebaseStorageNode(node)
-    firebaseStorageNode.setStatusCallback(node.status.bind(node))
+    const firebaseStorageFileNode = new FirebaseStorageFileNode(node)
+    firebaseStorageFileNode.setStatusCallback(node.status.bind(node))
 
     node.on('input', msg => {
-      firebaseStorageNode.onInput(msg, node.send.bind(node), node.error.bind(node))
+      firebaseStorageFileNode.onInput(msg, node.send.bind(node), node.error.bind(node))
     })
-  }
-
-  RED.nodes.registerType("firebase storage get", FirebaseStorage);
+  });
 }
 
 

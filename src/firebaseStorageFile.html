@@ -1,4 +1,4 @@
-<script type="text/x-red" data-template-name="firebase storage get">
+<script type="text/x-red" data-template-name="firebase storage file">
   <div class="form-tips"><p>Firebase storage</p>
 
     <div class="form-row">
@@ -10,18 +10,18 @@
       <input type="text" id="node-input-name">
     </div>
     <div class="form-row">
-      <label for="node-input-operation"><i class="fa fa-tag"></i> Storage operation </label>
+      <label for="node-input-operation"><i class="fa fa-tag"></i> Storage file (object) operation </label>
       <input type="text" id="node-input-operation">
     </div>
     <div class="form-row">
-      <label for="node-input-object"><i class="fa fa-tag"></i> Object </label>
-      <input type="text" id="node-input-object" placeholder="database object">
+      <label for="node-input-object"><i class="fa fa-tag"></i> Object (file) </label>
+      <input type="text" id="node-input-object" placeholder="storage object">
     </div>
   </div>
 </script>
 
-<script type="text/x-red" data-help-name="firebase storage get">
-    <p>This get metadata from a storage object.</p>
+<script type="text/x-red" data-help-name="firebase storage file">
+    <p>This operates on a firebase file object.</p>
 </script>
 
 <style type="text/css">
@@ -39,7 +39,7 @@
 
 <script type="text/javascript">
 
-  RED.nodes.registerType('firebase storage get',{
+  RED.nodes.registerType('firebase storage file',{
     category: 'firebase',
     defaults: {
       name: {required:false},
@@ -53,7 +53,7 @@
     icon: "bridge.png",
     align: "right",
     label: function() {
-        return this.name || this.object || "firebase storage get";
+        return this.name || this.object || "firebase storage file";
     },
     labelStyle: function() {
         return (this.name || this.object) ? "node_label_italic" : "";

@@ -1,4 +1,4 @@
-function FirebaseStorageNode(config) {
+function FirebaseStorageFileNode(config) {
   if (!config.admin) {
     throw "No firebase admin specified";
   }
@@ -27,10 +27,10 @@ function FirebaseStorageNode(config) {
       errorcb(e);
     }
   };
+
+  this.setStatusCallback = function(cb) {
+    this.onStatus = cb;
+  };
 }
 
-FirebaseStorageNode.prototype.setStatusCallback = function(cb) {
-	this.onStatus = cb;
-};
-
-module.exports = FirebaseStorageNode
+module.exports = FirebaseStorageFileNode
