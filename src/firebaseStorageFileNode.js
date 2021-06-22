@@ -22,7 +22,8 @@ function FirebaseStorageFileNode(config) {
   
     try {
       const [metadata] = await this.bucket.file(objectPath)[operation]();
-      out(metadata);
+      msg.payload = metadata;
+      out(msg);
     } catch (e){
       errorcb(e);
     }
